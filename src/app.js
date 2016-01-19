@@ -12,14 +12,14 @@ var appModule = angular.module('App', [
     // Config
     //'App.Config',
 
-    // Resources
-    'App.Resources',
+    // Models
+    'App.Models',
 
     // Widget
     //'App.Widgets',
 
     // Components
-    'App.Loading'
+    'App.Loading',
     'App.Header'
 
 ]);

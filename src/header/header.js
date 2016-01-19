@@ -1,18 +1,18 @@
-angular.module('App.Loading', []).controller('App.Loading.Controller', [
+angular.module('App.Header', []).controller('App.Header.Controller', [
     '$scope',
-    '$timeout',
+    'User',
     function(
         $scope,
-        $timeout
+        User
     ) {
-        $scope.loading = true
+        $scope.user = User.getUser()
 
-        $scope.$on('$includeContentLoaded', function() {
-            $timeout(function() {
-                $scope.loading = false
-                console.log('11')
-            }, 2000)
-        });
+        $scope.user.$promise.then(function(user) {
+            console.log('aa')
+
+        })
+
+
 
     }
 ]);

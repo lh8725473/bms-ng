@@ -1,11 +1,9 @@
-angular.module('App.Resources').factory('User', [
+angular.module('App.Models').factory('User', [
     '$resource',
-    'CONFIG',
     function(
-        $resource,
-        CONFIG
+        $resource
     ) {
-        return $resource(CONFIG.API_ROOT + '/api/v1/accounts', {}, {
+        return $resource('/api/v1/accounts', {}, {
             query: {
                 method: "GET",
                 params: {
